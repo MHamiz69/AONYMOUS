@@ -7,28 +7,27 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e6f7ff, #cceeff);
-    color: #333;
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    color: #ffffff;
     min-height: 100vh;
     overflow: hidden;
     font-size: 16px;
 }
 
 .page {
-    display: none;
+    display: none; /* Initially hide all pages */
     min-height: 100vh;
     max-height: 100vh;
     padding: 5vw;
     animation: fadeIn 1s ease-in;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .page.active {
-    display: flex;
+    display: flex; /* Show the active page */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Page 1: Birthday Wish */
@@ -47,16 +46,16 @@ body {
     font-size: 4vw;
     color: #66ccff;
     margin-bottom: 2vh;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: bounce 2s infinite;
     max-width: 90vw;
 }
 
 .name {
     font-size: 5vw;
-    color: #3399ff;
+    color: #ff66cc;
     margin-bottom: 3vh;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     animation: pulse 1.5s infinite;
     max-width: 90vw;
 }
@@ -87,7 +86,7 @@ body {
     transform: translateX(-50%);
     width: 0.2vw;
     height: 5vw;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .balloon:after {
@@ -98,7 +97,7 @@ body {
     transform: translateX(-50%);
     width: 1vw;
     height: 1vw;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 }
 
@@ -141,33 +140,33 @@ body {
     }
 }
 
-/* Balloon color variations */
+/* Balloon color variations with darker theme */
 .balloon.red {
-    background: linear-gradient(135deg, #ff9999, #ff6666);
+    background: linear-gradient(135deg, #b30000, #800000);
 }
 
 .balloon.blue {
-    background: linear-gradient(135deg, #99ccff, #6699ff);
+    background: linear-gradient(135deg, #003366, #002244);
 }
 
 .balloon.orange {
-    background: linear-gradient(135deg, #ffcc99, #ff9966);
+    background: linear-gradient(135deg, #b35c00, #804000);
 }
 
 .balloon.green {
-    background: linear-gradient(135deg, #99ff99, #66cc66);
+    background: linear-gradient(135deg, #006600, #004400);
 }
 
 .balloon.purple {
-    background: linear-gradient(135deg, #cc99ff, #9966ff);
+    background: linear-gradient(135deg, #660066, #440044);
 }
 
 .balloon.yellow {
-    background: linear-gradient(135deg, #ffff99, #ffcc00);
+    background: linear-gradient(135deg, #b3b300, #808000);
 }
 
 .balloon.pink {
-    background: linear-gradient(135deg, #ff99cc, #ff6699);
+    background: linear-gradient(135deg, #b30059, #800040);
 }
 
 /* Cake Animation */
@@ -180,10 +179,10 @@ body {
 .cake-body {
     width: 15vw;
     height: 10vw;
-    background: linear-gradient(to bottom, #ffccdd, #ff99bb);
+    background: linear-gradient(to bottom, #33001a, #1a000d);
     border-radius: 1vw 1vw 5vw 5vw;
     position: relative;
-    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.5);
     min-width: 80px;
     min-height: 60px;
 }
@@ -195,7 +194,7 @@ body {
     left: 0;
     width: 100%;
     height: 2vw;
-    background: #ff6699;
+    background: #660033;
     border-radius: 0.5vw;
 }
 
@@ -206,7 +205,7 @@ body {
     transform: translateX(-50%);
     width: 0.8vw;
     height: 3vw;
-    background: #ff9966;
+    background: #b35c00;
     border-radius: 0.4vw 0.4vw 0 0;
     z-index: 10;
     min-width: 6px;
@@ -249,29 +248,30 @@ body {
 }
 
 .message-content {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(30, 30, 30, 0.9);
     padding: 3vw;
     border-radius: 2vw;
-    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.5);
     margin-bottom: 3vh;
     text-align: left;
     width: 100%;
     max-height: 60vh;
     overflow-y: auto;
     flex-grow: 1;
+    border: 1px solid #444;
 }
 
 .message-content p {
     font-size: 1.5vw;
     line-height: 1.8;
     margin-bottom: 2vh;
-    color: #555;
+    color: #cccccc;
 }
 
 .message-content p:first-child {
     font-weight: bold;
     font-size: 1.8vw;
-    color: #3399ff;
+    color: #ff66cc;
     text-align: center;
     margin-bottom: 2.5vh;
 }
@@ -307,20 +307,21 @@ body {
 }
 
 .photo-item {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(30, 30, 30, 0.9);
     border-radius: 2vw;
     overflow: hidden;
-    box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     min-height: 25vw;
     display: flex;
     flex-direction: column;
+    border: 1px solid #444;
 }
 
 .photo-item:hover {
     transform: translateY(-1vw);
-    box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5vw 3vw rgba(0, 0, 0, 0.7);
 }
 
 .placeholder-image {
@@ -330,46 +331,47 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 4vw;
-    background: linear-gradient(135deg, #cceeff, #99ddff);
+    background: linear-gradient(135deg, #222222, #111111);
     flex-grow: 1;
     min-height: 15vw;
+    object-fit: contain;
+    border-radius: 1vw;
 }
 
-.photo-item p {
-    padding: 1.5vw;
-    font-weight: bold;
-    color: #3399ff;
-    font-size: 1.2vw;
+/* Responsive image adjustments */
+@media (max-width: 768px) {
+    .placeholder-image {
+        height: 20vw;
+        font-size: 7vw;
+    }
 }
 
-/* Buttons */
-.next-btn, .prev-btn {
-    background: linear-gradient(to right, #66ccff, #3399ff);
-    color: white;
-    border: none;
-    padding: 1.5vw 3vw;
-    font-size: 1.2vw;
-    border-radius: 5vw;
-    cursor: pointer;
-    margin: 1vw;
-    box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    min-width: 120px;
-    min-height: 40px;
+@media (max-width: 480px) {
+    .placeholder-image {
+        height: 25vw;
+        font-size: 8vw;
+    }
+}
+
+@media (min-width: 1800px) {
+    .placeholder-image {
+        height: 12vw;
+        font-size: 3vw;
+    }
 }
 
 .next-btn:hover, .prev-btn:hover {
     transform: translateY(-0.3vw);
-    box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #3399ff, #66ccff);
+    box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to right, #002244, #003366);
 }
 
 .prev-btn {
-    background: linear-gradient(to right, #99ccff, #6699ff);
+    background: linear-gradient(to right, #330033, #220022);
 }
 
 .prev-btn:hover {
-    background: linear-gradient(to right, #6699ff, #99ccff);
+    background: linear-gradient(to right, #220022, #330033);
 }
 
 /* Animations */
