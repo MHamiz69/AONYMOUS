@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Fareeha!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page 1: Birthday Wish -->
+    <section id="page1" class="page active">
+        <div class="birthday-container">
+            <h1 class="birthday-title">Happy Birthday!</h1>
+            <h2 class="name">Fareeha</h2>
+            <div class="balloons-container" id="balloonsContainer">
+                <!-- Dynamic balloons will be added here -->
+            </div>
+            <div class="cake">
+                <div class="candle"></div>
+                <div class="cake-body"></div>
+            </div>
+            <button class="next-btn" onclick="showPage(2)">Next</button>
+        </div>
+    </section>
+
+    <!-- Page 2: Personal Message -->
+    <section id="page2" class="page">
+        <div class="message-container">
+            <h1 class="message-title">A Special Message for You</h1>
+            <div class="message-content">
+                <p>Dear Fareeha,</p>
+                <p>On your special day, I want you to know how amazing you are! Your smile lights up every room, and your kindness touches everyone around you.</p>
+                <p>May this new year of life bring you endless joy, success, and all the happiness you deserve. You're talented, beautiful, and truly one of a kind.</p>
+                <p>Wishing you the most wonderful birthday filled with love, laughter, and unforgettable memories!</p>
+                <p>Have an absolutely fantastic day!</p>
+            </div>
+            <button class="next-btn" onclick="showPage(3)">Next</button>
+            <button class="prev-btn" onclick="showPage(1)">Back</button>
+        </div>
+    </section>
+
+    <!-- Page 3: Photo Gallery -->
+    <section id="page3" class="page">
+        <div class="gallery-container">
+            <h1 class="gallery-title">Birthday Memories</h1>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <div class="placeholder-image">👤</div>
+                    <p>Gift from Hamiz</p>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="showPage(2)">Back</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
